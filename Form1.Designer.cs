@@ -33,10 +33,10 @@
             this.inicioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.haciaAtrásToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.haciaAdelanteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.BotonIr = new System.Windows.Forms.Button();
             this.comboBoxDirecciones = new System.Windows.Forms.ComboBox();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,9 +46,10 @@
             this.navegarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1208, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1723, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // navegarToolStripMenuItem
             // 
@@ -82,9 +83,16 @@
             this.haciaAdelanteToolStripMenuItem.Text = "Hacia adelante";
             this.haciaAdelanteToolStripMenuItem.Click += new System.EventHandler(this.haciaAdelanteToolStripMenuItem_Click);
             // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
+            // 
             // BotonIr
             // 
-            this.BotonIr.Location = new System.Drawing.Point(685, 4);
+            this.BotonIr.Location = new System.Drawing.Point(685, 3);
             this.BotonIr.Name = "BotonIr";
             this.BotonIr.Size = new System.Drawing.Size(75, 21);
             this.BotonIr.TabIndex = 1;
@@ -97,15 +105,14 @@
             this.comboBoxDirecciones.FormattingEnabled = true;
             this.comboBoxDirecciones.Items.AddRange(new object[] {
             "",
-            "https://www.google.com.gt/search",
             "https://www.youtube.com/?hl=ES",
-            "https://www.google.com/intl/es/gmail/about/",
             "https://es-la.facebook.com/",
             "https://www.twitch.tv/"});
-            this.comboBoxDirecciones.Location = new System.Drawing.Point(766, 4);
+            this.comboBoxDirecciones.Location = new System.Drawing.Point(766, 3);
             this.comboBoxDirecciones.Name = "comboBoxDirecciones";
             this.comboBoxDirecciones.Size = new System.Drawing.Size(430, 21);
             this.comboBoxDirecciones.TabIndex = 2;
+            this.comboBoxDirecciones.SelectedIndexChanged += new System.EventHandler(this.comboBoxDirecciones_SelectedIndexChanged);
             // 
             // webBrowser1
             // 
@@ -115,21 +122,14 @@
             this.webBrowser1.Location = new System.Drawing.Point(12, 31);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1184, 496);
+            this.webBrowser1.Size = new System.Drawing.Size(1699, 496);
             this.webBrowser1.TabIndex = 3;
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.salirToolStripMenuItem.Text = "Salir";
-            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1208, 548);
+            this.ClientSize = new System.Drawing.Size(1723, 548);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.comboBoxDirecciones);
             this.Controls.Add(this.BotonIr);
